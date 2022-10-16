@@ -10,3 +10,6 @@ Este proyecto fue creado por los siguientes estudiantes:
 - Fernando Osorio
 - Rodrigo Paredes 
 - Roberto Duran
+
+
+## Instrucciones
