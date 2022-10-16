@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -11,6 +9,50 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.navbar{
+  height: 95px;
+  background-color: rgb(239, 240, 132);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.login{
+  margin: auto;
+  height: auto; 
+  text-align: center;
+  width: 50%;
+}
+
+.login-box{
+  margin: auto;
+  margin-top: 50px;
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: rgb(25, 144, 234);
+} 
+.login-boxa{
+
+  margin: auto;
+  margin-top: 60px;
+  width: 200px;
+  height: 200px;
+  
+} 
+
+
+img.pequeña{
+  width: 50px;
+  height: 50px;
+}
+img.mediana{
+  width: 100px;
+  height: 100px;
+}
+img.grande{
+  width: 200px;
+  height: 200px;
 }
 
 /* .App-header {
@@ -24,10 +66,7 @@
   color: white; 
 } */
 
-/* Color de los links */
-.App-link {
-  color: #61dafb;
-}
+
 
 /* Encargado de rotar el logo de react en la pagina de ejemplo
 @keyframes App-logo-spin {
