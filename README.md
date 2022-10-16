@@ -23,6 +23,10 @@ Este proyecto fue creado por los siguientes estudiantes:
 ## Comandos 
 
 ```shell
-npm install
+- npm install
+
+```
+```shell
+- npm install moongose
 
 ```
