@@ -19,3 +19,9 @@ Este proyecto fue creado por los siguientes estudiantes:
 - Bootstrap 5
 - Gestor de paquetes npm
 
+## Comandos 
+
+```shell
+npm install
+
+```
