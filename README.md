@@ -12,4 +12,9 @@ Este proyecto fue creado por los siguientes estudiantes:
 - Roberto Duran
 
 
-## Instrucciones
+## Frameworks utilizados
+
+- React
+- NodeJS(16.8.0)
+- Bootstrap 5
+
