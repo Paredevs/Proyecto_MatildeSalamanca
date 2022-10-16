@@ -18,6 +18,7 @@ Este proyecto fue creado por los siguientes estudiantes:
 - NodeJS(16.8.0)
 - Bootstrap 5
 - Gestor de paquetes npm
+- Gestor de base de datos mongodb
 
 ## Comandos 
 
