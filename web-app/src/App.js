@@ -1,14 +1,17 @@
 import "./App.css";
-import logo from "./logo.png";
+
 
 function App() {
   return (
-    <div className="App">
-      <nav className="navbar">
+    <div className="App" >
+      {/* <div  style={{ backgroundImage: `url(${background})` }}> </div>  */}
+
+      <img src="../images/logo.png" className="App-logo" alt="logo" /> 
+      {/* <nav className="navbar">
         <div className="container-fluid">
           <span className="navbar-brand mb-0 h1 "><img class="pequeña" src={logo} alt="" /><p>Colegio Matilde Salamanca</p></span>
         </div>
-      </nav>
+      </nav> */}
       <div className="login">
         <div className="login-box">
           <div className="login-boxa">
@@ -23,9 +26,9 @@ function App() {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-            <div id="emailHelp" class="form-text">
+            {/* <div id="emailHelp" class="form-text">
               Tu correo no se compartira con nadie.
-            </div>
+            </div> */}
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">
@@ -72,11 +75,18 @@ function App() {
         </a> }
         <p>Colegio Matilde Salamanca</p>
       </header> */}
-      <body>
-        {/* <img src="../public/logo.png" className="App-logo" alt="logo" /> */}
+       
+      
+        {/* */}
         
-      </body>
+  
+        <footer>
+          <div class="footer_left"><p>Escuela Matilde Salamanca</p></div>
+          <div class="footer_right"><p>9 7793 5574</p></div>
+          <div class="footer_right"><p>Calle Matilde Salamanca Nro.498, Salamanca, Chile</p></div>
+        </footer> 
     </div>
+    
   );
 }
 
