@@ -1,12 +1,12 @@
 import "./App.css";
-
+import logo from "./images/logo.png"
 
 function App() {
   return (
     <div className="App" >
       {/* <div  style={{ backgroundImage: `url(${background})` }}> </div>  */}
-
-      <img src="../images/logo.png" className="App-logo" alt="logo" /> 
+      <img src={logo} className="App-logo" alt="logo" /> 
+      {/* <img src="../images/logo.png" className="App-logo" alt="logo" />  */}
       {/* <nav className="navbar">
         <div className="container-fluid">
           <span className="navbar-brand mb-0 h1 "><img class="pequeña" src={logo} alt="" /><p>Colegio Matilde Salamanca</p></span>
@@ -18,7 +18,7 @@ function App() {
           <form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">
-              RUT
+              Correo electronico
             </label>
             <input
               type="email"
