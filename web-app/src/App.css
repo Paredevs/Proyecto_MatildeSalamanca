@@ -62,6 +62,16 @@ img.pequeña{
   height: 50px;
 }
 
+img.mediana{
+  width: 100px;
+  height: 100px;
+}
+
+img.grande{
+  width: 220px;
+  height: 200px;
+}
+
  footer{
     position: absolute;
     vertical-align: bottom;

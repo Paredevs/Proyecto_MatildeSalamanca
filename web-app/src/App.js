@@ -1,4 +1,5 @@
 import "./App.css";
+// import logo from "./images/logo.png";
 
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
     <div className="App" >
       {/* <div  style={{ backgroundImage: `url(${background})` }}> </div>  */}
 
-      <img src="../images/logo.png" className="App-logo" alt="logo" /> 
+     
+      {/* <img src={logo} className="grande" alt="" />  */}
       {/* <nav className="navbar">
         <div className="container-fluid">
           <span className="navbar-brand mb-0 h1 "><img class="pequeña" src={logo} alt="" /><p>Colegio Matilde Salamanca</p></span>
