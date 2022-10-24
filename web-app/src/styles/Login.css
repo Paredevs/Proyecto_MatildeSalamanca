@@ -1,0 +1,127 @@
+.Login{
+    width: 100%;
+   height: 100%;
+  }
+  
+  #root{
+  
+   width: 100%;
+   height: 100%;
+    }
+  
+  /* .navbar{
+    height: 95px;
+    background-color: rgb(239, 240, 132);
+    font-family: 'Courier New', Courier, monospace;
+  } */
+  
+  .login{
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    border-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    height: 55%; 
+    text-align: center;
+    width: 40%;
+    box-shadow: rgb(0 0 0 / 50%) 1px 1px 10px;
+  }
+  
+  .login-box{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+  } 
+
+    
+
+  .login-boxa{
+    
+    margin: auto;
+    margin-top: 60px;
+    width: 200px;
+    height: 200px;
+    
+  } 
+  
+  .btn-primary{
+    color: black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: rgb(247, 194, 124);  
+    border-color: black;
+  }
+  
+  .btn-primary:hover{background-color:rgb(247, 165, 12);}
+  
+  .form{
+    background-color: rgba(41,39,39,0.3);
+    box-shadow: 0 5px 30px black  ;
+    text-decoration-color: yellowgreen;
+  }
+  
+  
+  img.pequeña{
+    width: 50px;
+    height: 50px;
+  }
+  
+  img.mediana{
+    width: 100px;
+    height: 100px;
+  }
+  
+  img.grande{
+    width: 220px;
+    height: 200px;
+  }
+  
+   footer{
+      position: absolute;
+      vertical-align: bottom;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      min-height: 100px;
+      z-index: 10;
+      background-color: rgba(255, 255, 255, .75);
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 14px;
+      color: #898989;
+  } 
+  .App-header {
+    background-color: #37a1fe;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white; 
+    opacity: 1;
+  }
+  
+  .p{
+  height: 30%;
+  }
+  
+  
+  
+  /* Encargado de rotar el logo de react en la pagina de ejemplo
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }                               
+    to {
+      transform: rotate(360deg);
+    }
+  }
+   */
