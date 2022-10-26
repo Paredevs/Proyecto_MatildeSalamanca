@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
+
 export default function Login(){
 
    
@@ -23,7 +24,7 @@ export default function Login(){
         <div className="login">
           <div className="login-box">
            
-            <form>
+            <form oaction="/Menu" method='get'>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">
                 Correo electronico
@@ -60,7 +61,7 @@ export default function Login(){
                 Mantener sesion iniciada
               </label>
             </div>
-            <button type="submit"  class="btn btn-primary">
+            <button type="submit"  href="/Home" class="btn btn-primary">
               Iniciar sesion
             </button>
             </form>
