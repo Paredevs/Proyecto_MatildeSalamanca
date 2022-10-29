@@ -1,5 +1,9 @@
 function Menu(){
-    return(<div>Pagina Principal Administrador</div>
+    return(<div>Hola
+        <div>
+            Pumba
+        </div>
+    </div>
     
     );
 }
