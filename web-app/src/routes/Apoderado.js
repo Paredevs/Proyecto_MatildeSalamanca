@@ -1,4 +1,4 @@
-import '../styles/Secre.css';
+import '../styles/Apoderado.css';
 import '..'
 function Apoderado(){
 
