@@ -1,5 +1,6 @@
 import '../styles/Secre.css';
 import '..'
+
 function Secre(){
 
     return(

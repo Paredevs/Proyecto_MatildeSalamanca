@@ -10,10 +10,10 @@ export default function Login(){
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  async function loginUser(event) {
+  async function registerUser(event) {
     
     event.preventDefault();
-    const response = await fetch('http://localhost:5000/api/login', {
+    const response = await fetch('http://localhost:5000/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -23,21 +23,13 @@ export default function Login(){
         password: password,
       })
     })
-
     const data = await response.json();
-
-    if(data.user){
-      alert('Usuario logeado');
-      window.location.href = '/Profe';
-    }else{
-      alert('Por favor, checkea tu email y contraseña');
-    }
-   
+    console.log(data);
   
   }
 
     return(
-        <div className="Login" >Login screen
+        <div className="Login" >Register screen
         {/* <div  style={{ backgroundImage: `url(${background})` }}> </div> Forma de agregar fondo */}
         {/* <Main /> */}
         {/* <img src={logo} className="grande" alt="" />  */}
@@ -49,7 +41,7 @@ export default function Login(){
         <div className="login">
           <div className="login-box">
            
-            <form onSubmit={loginUser}>
+            <form onSubmit={registerUser}>
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Correo electronico

@@ -21,7 +21,7 @@ const Record = (props) => (
  </tr>
 );
  
-export default function RecordList() {
+export default function ListaAnotaciones() {
  const [records, setRecords] = useState([]);
  
  // This method fetches the records from the database.

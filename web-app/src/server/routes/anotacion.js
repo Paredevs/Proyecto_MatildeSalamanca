@@ -1,8 +1,9 @@
 const express = require("express");
 const recordRoutes = express.Router(); // Lo usamos para definir nuestras rutas, El enrutador tomará el control de las solicitudes que comiencen con la ruta /anotacion
-const dbo = require("../db/conn");  // This will help us connect to the database
+const dbo = require("../db/conn");  // Esto nos ayudara a conectarnos a la base de datos
 const ObjectId = require("mongodb").ObjectId;  // This help convert the id from string to ObjectId for the _id.
-let collection = "anotacion";
+let collection = "anotacion"; //Nombre de la coleccion que se usara
+
 
 // Esta seccion ayudarara a enlistar todas las anotaciones
 recordRoutes.route("/record").get(function (req, res) {

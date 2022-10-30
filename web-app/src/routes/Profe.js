@@ -30,7 +30,7 @@ function Profe(){
      <li><b> Nombre de Usuario<br></br>Curso<br></br></b></li>
      <li><a href="/#"><i class="fa fa-key"></i>Cambiar Clave</a></li>
      <li><a href="/#"><i class="fa fa-wrench"></i>Opciones</a></li>
-     <li><a href="/#"><i class="fa fa-window-close"></i>Cerrar Sesion</a></li>
+     <li><a href="/"><i class="fa fa-window-close"></i>Cerrar Sesion</a></li>
     </ul>
    </div>
    <footer>
@@ -53,7 +53,8 @@ function Profe(){
     {/*<div class="botones">*/}
         <button class="btn btn-primary">Ingresar Notas</button>
         <button class="btn btn-primary">Ingresar Asistencia</button>
-        <button class="btn btn-primary">Ingresar Anotaciones</button>
+        {/* <button class="btn btn-primary">Ingresar Anotaciones</button> */}
+        <a href='/Anotacion' class="btn btn-primary">Ingresar Anotaciones</a>
   { /* </div> */}
     </section>
   </body>
