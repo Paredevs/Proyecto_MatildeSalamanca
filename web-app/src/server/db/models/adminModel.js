@@ -3,29 +3,30 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const apoderadoSchema =  new Schema({
+const administradorSchema =  new Schema({
 
-    Nombre: { 
+    name: { 
         type: String, 
         required: [true,"Por favor, escriba un nombre"], 
         unique: false
     },
-    Email: { 
+    email: { 
         type: String, 
         required: [true,"Por favor, escriba un email"], 
         unique: [true,"El email ya existe"],
     },
-    Password: { 
+    password: { 
         type: String, 
         required: [true,"Por favor, escriba una contraseña"], 
         unique: false,
     },
-    Carrera: { 
+    type: { 
         type: String, 
-        required: [true,"Por favor, escriba una carrera"], 
+        required: [true,"Por favor, seleccione un rol"], 
         unique: false,
-    }
-},{collection:'Secretarias',versionKey: false}
+    },
+    
+},{collection:'Administradores',versionKey: false}
 )
 
-module.exports = mongoose.model('Apoderado', apoderadoSchema);
+module.exports = mongoose.model('Administrador', administradorSchema);

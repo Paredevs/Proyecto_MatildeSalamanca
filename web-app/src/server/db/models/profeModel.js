@@ -12,6 +12,11 @@ const Profesor= new mongoose.Schema({
       required: [true,"Por favor, escriba una contraseña"], 
       unique: false
     },
+    type: { 
+      type: String, 
+      required: [true,"Por favor, escriba una contraseña"], 
+      unique: false
+    }
     
   },{collection:'Profesores',versionKey: false}
   

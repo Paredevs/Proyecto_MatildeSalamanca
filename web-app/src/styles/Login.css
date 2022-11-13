@@ -17,7 +17,7 @@
   
   .login{
     margin: auto;
-    margin-top: 90px;
+    margin-top: 30px;   /* Altura del cuadro transparente del login*/ 
     margin-bottom: 40px;
     border-top: 10px;
     padding-left: 10px;

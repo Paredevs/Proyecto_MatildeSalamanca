@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 
 const apoderadoSchema =  new Schema({
+
     Nombre: { 
         type: String, 
         required: [true,"Por favor, escriba un nombre"], 
@@ -24,4 +25,7 @@ const apoderadoSchema =  new Schema({
         required: [true,"Por favor, escriba el nombre de su hijo"], 
         unique: false
     },
-})
+},{collection:'Apoderados',versionKey: false}
+)
+
+module.exports = mongoose.model('Apoderado', apoderadoSchema);

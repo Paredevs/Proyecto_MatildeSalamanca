@@ -1,9 +1,11 @@
 const Profesor = require("./db/models/profeModel"); //Test para login
+const Administrador = require("./db/models/adminModel"); //Para administrador
 const express = require("express");
 const app = express();
 const cors = require("cors");
 require("dotenv").config({ path: "./config.env" });
 const port = process.env.PORT || 5000;
+
 
 
 app.use(cors());
@@ -18,31 +20,56 @@ const dbo = require("./db/conn");
 const { default: mongoose } = require("mongoose");
 const jwt = require("jsonwebtoken");
 
-mongoose.connect('mongodb+srv://mongouser:mongouser@taller2bd2.cpnky.mongodb.net/Datos?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://mongouser:mongouser@taller2bd2.cpnky.mongodb.net/Usuarios?retryWrites=true&w=majority');
 
 
-app.post('/api/register', async (req, res) => {
+app.post('/api/administrador/register', async (req, res) => {
+
+  console.log(req.body);
+  try{
+    await Administrador.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+      type: req.body.type,
+    })
+    res.json({status: 'Administrador creado'});
+  }catch (err){
+    console.log(err);
+    res.json({status: 'error', message: "Error al crear el administrador"});
+  }
+});
+
+app.post('/api/profesor/register', async (req, res) => {
 
   console.log(req.body);
   try{
     await Profesor.create({
       email: req.body.email,
       password: req.body.password,
+      type: req.body.type,
     })
-    res.json({status: 'ok'});
+    res.json({status: 'Profesor creado'});
   }catch (err){
     console.log(err);
     res.json({status: 'error', message: "Error al crear profesor"});
   }
 });
 
+
+
+
+
+
 app.post('/api/login',  async (req, res) => {
   
+    
     const user = await Profesor.findOne({
       email: req.body.email, 
       password: req.body.password,
     
     })
+    
 
     if(user){
 
@@ -56,6 +83,8 @@ app.post('/api/login',  async (req, res) => {
       return res.json({status: 'ok', user: false});
     }
 })
+
+
 
 
 
