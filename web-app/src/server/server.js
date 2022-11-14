@@ -20,10 +20,10 @@ const dbo = require("./db/conn");
 const { default: mongoose } = require("mongoose");
 const jwt = require("jsonwebtoken");
 
-mongoose.connect('mongodb+srv://mongouser:mongouser@taller2bd2.cpnky.mongodb.net/Usuarios?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://admin:salamanca@salamancadb.vgffqvc.mongodb.net/EscuelaDB?retryWrites=true&w=majority');
 
 
-app.post('/api/administrador/register', async (req, res) => {
+app.post('/api/administrador/register', async (req, res) => {   //Registrar administrador
 
   console.log(req.body);
   try{
@@ -40,7 +40,7 @@ app.post('/api/administrador/register', async (req, res) => {
   }
 });
 
-app.post('/api/profesor/register', async (req, res) => {
+app.post('/api/profesor/register', async (req, res) => {  // Registrar profesor
 
   console.log(req.body);
   try{
@@ -59,7 +59,7 @@ app.post('/api/profesor/register', async (req, res) => {
 
 
 
-
+//Seccion de login
 
 app.post('/api/login',  async (req, res) => {
   

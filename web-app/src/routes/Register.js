@@ -8,6 +8,7 @@ import "../styles/Login.css";
 
 
 export default function Login() {
+
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -72,6 +73,7 @@ export default function Login() {
                 className="form-control"
                 id="exampleInputName"
                 onChange={(e) => setName(e.target.value)}
+                autoComplete="off"
               />
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Correo electronico</label>
@@ -81,6 +83,7 @@ export default function Login() {
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="off"
               />
                {/* <div id="emailHelp" class="form-text">
                 Tu correo no se compartira con nadie.

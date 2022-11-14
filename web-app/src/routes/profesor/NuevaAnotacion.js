@@ -39,7 +39,7 @@ export default function Create() {
     });
     
     setForm({  nombre_alumno: "", comentario: "", tipo: "", materia: "", fecha: ""  }); //Deja los campos vacios
-    navigate("/Create");
+    navigate("/profesor"); //Redirecciona a la pagina de anotaciones
  
 }
  

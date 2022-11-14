@@ -14,7 +14,7 @@ module.exports = {
       if (db)
       {
         
-        _db = db.db("TallerBD2");
+        _db = db.db("EscuelaDB");
         console.log("Successfully connected to MongoDB."); 
       }
       return callback(err);
