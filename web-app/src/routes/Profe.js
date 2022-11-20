@@ -25,7 +25,7 @@ function Profe() {
         <div className="sidebar">
           <header>
             Perfil Profesor
-            <img
+            <img className="Picture_logo"
               src="https://cdn2.estamosrodando.com/biografias/14/7/198-steve-carell-358703.jpg"
               alt="usuario"
             ></img>

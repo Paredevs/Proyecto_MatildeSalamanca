@@ -19,7 +19,7 @@ function Secre() {
         <div className="sidebar">
           <header>
             Perfil Administrativo
-            <img
+            <img className="Picture_logo"
               src="    https://s3.amazonaws.com/gobcl-prod/filer_public_thumbnails/public_files/2022/subsecretarios/camilavallejo.jpg__328x342_q85_crop_subsampling-2.jpg
 "
               alt="usuario"

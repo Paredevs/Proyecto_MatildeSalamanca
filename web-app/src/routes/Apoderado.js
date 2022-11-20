@@ -20,7 +20,7 @@ function Apoderado(){
   {/*aqui iban los botones antes: ingresar notas etc */}
     <div class="sidebar">
     <header>Perfil Apoderado
-    <img src="https://i.pinimg.com/originals/8b/7b/b7/8b7bb738fb9d50571af414c30e086977.jpg" alt="usuario"></img>
+    <img className="Picture_logo" src="https://i.pinimg.com/originals/8b/7b/b7/8b7bb738fb9d50571af414c30e086977.jpg" alt="usuario"></img>
     
         {/*<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>

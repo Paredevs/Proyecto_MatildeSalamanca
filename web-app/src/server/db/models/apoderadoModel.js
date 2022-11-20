@@ -5,24 +5,29 @@ const Schema = mongoose.Schema;
 
 const apoderadoSchema =  new Schema({
 
-    Nombre: { 
+    name: { 
         type: String, 
         required: [true,"Por favor, escriba un nombre"], 
         unique: false
     },
-    Email: { 
+    email: { 
         type: String, 
         required: [true,"Por favor, escriba un email"], 
         unique: [true,"El email ya existe"],
     },
-    Password: { 
+    password: { 
         type: String, 
         required: [true,"Por favor, escriba una contraseña"], 
         unique: false,
     },
-    Nombre_Alumno: {
+    role: { 
+        type: String, 
+        required: [true,"Por favor, escriba un rol"], 
+        unique: false
+      },
+    nombre_Alumno: {
         type: String,
-        required: [true,"Por favor, escriba el nombre de su hijo"], 
+        required: [false,"Por favor, escriba el nombre de su hijo"], 
         unique: false
     },
 },{collection:'Apoderados',versionKey: false}

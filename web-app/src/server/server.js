@@ -1,8 +1,8 @@
 
 const Profesor = require("./db/models/profeModel"); //Test para login
 const Administrador = require("./db/models/adminModel"); //Para administrador
-// const Secretaria = require("./db/models/secreModel"); //Para secretaria
-// const Apoderado = require("./db/models/apoderadoModel"); //Para apoderado
+const Secretaria = require("./db/models/secreModel"); //Para secretaria
+const Apoderado = require("./db/models/apoderadoModel"); //Para apoderado
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -47,6 +47,24 @@ app.post('/api/admin/register', async (req, res) => {   //Registrar administrado
     res.json({status: 'error', message: "Error al crear el administrador"});
   }
 });
+app.post('/api/secretaria/register', async (req, res) => {   //Registrar secretarie
+
+  console.log(req.body);
+  try{
+    await Secretaria.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+      role: req.body.role,
+      carrera: req.body.carrera
+    })
+    
+    res.json({status: 'secretaria creado'});
+  }catch (err){
+    console.log(err);
+    res.json({status: 'error', message: "Error al crear el secretaria"});
+  }
+});
 
 app.post('/api/profesor/register', async (req, res) => {  // Registrar profesor
 
@@ -65,6 +83,22 @@ app.post('/api/profesor/register', async (req, res) => {  // Registrar profesor
   }
 });
 
+app.post('/api/apoderado/register', async (req, res) => {  // Registrar apoderado
+
+  console.log(req.body);
+  try{
+    await Apoderado.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+      role: req.body.role,
+    })
+    res.json({status: 'Apoderado creado'});
+  }catch (err){
+    console.log(err);
+    res.json({status: 'error', message: "Error al crear apoderado"});
+  }
+});
 
 
 
@@ -74,12 +108,32 @@ app.post('/api/login',  async (req, res) => {
   
     
   
-     const user = await Administrador.findOne({
+     let user = await Administrador.findOne({
        email: req.body.email, 
        password: req.body.password,
       // role: req.body.role,   comprueba si el rol es el mismo
 
      })
+     
+     let user1 = await Profesor.findOne({
+      email: req.body.email, 
+      password: req.body.password,
+     // role: req.body.role,   comprueba si el rol es el mismo
+
+    })
+    
+    let user2 = await Secretaria.findOne({
+      email: req.body.email, 
+      password: req.body.password,
+     // role: req.body.role,   comprueba si el rol es el mismo
+
+    })
+    let user3 = await Apoderado.findOne({
+      email: req.body.email, 
+      password: req.body.password,
+     // role: req.body.role,   comprueba si el rol es el mismo
+
+    })
 
     //  const user = await Profesor.findOne({
     //    email: req.body.email, 
@@ -87,8 +141,22 @@ app.post('/api/login',  async (req, res) => {
     //   // role: req.body.role,   comprueba si el rol es el mismo
 
     //  })
+    console.log(user)
+    console.log(user1+"este es Profesor")
+    console.log(user2+"este es scretaria")
+    console.log(user3+"este es scretaria")
     
-   
+   if(user1 != null){
+       user=user1
+   }
+   if(user2 != null){
+    user=user2
+   }
+
+   if(user3 != null){
+    user=user3
+   }
+
     if(user){
 
       const token = jwt.sign({

@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const apoderadoSchema =  new Schema({
+const secretariaSchema =  new Schema({
 
     name: { 
         type: String, 
@@ -20,17 +20,17 @@ const apoderadoSchema =  new Schema({
         required: [true,"Por favor, escriba una contraseña"], 
         unique: false,
     },
-    carrera: { 
+    role: { 
         type: String, 
         required: [true,"Por favor, escriba una carrera"], 
         unique: false,
     },
-    role: {
+    carrera: {
         type: String,
-        required: [true,"Por favor, escriba un rol"],
+        required: [false,"Por favor, escriba un rol"],
         unique: false,
     }
 },{collection:'Secretarias',versionKey: false}
 )
 
-module.exports = mongoose.model('Apoderado', apoderadoSchema);
+module.exports = mongoose.model('Secretaria', secretariaSchema);
