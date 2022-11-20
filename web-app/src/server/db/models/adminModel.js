@@ -20,10 +20,15 @@ const administradorSchema =  new Schema({
         required: [true,"Por favor, escriba una contraseña"], 
         unique: false,
     },
-    type: { 
+    role: { 
         type: String, 
         required: [true,"Por favor, seleccione un rol"], 
         unique: false,
+    },
+    carrera: {
+        type: String, 
+        required: false, 
+        unique: false
     },
     
 },{collection:'Administradores',versionKey: false}
