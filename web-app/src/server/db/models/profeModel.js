@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 
 const Profesor= new mongoose.Schema({
 
+    name: {
+      type: String,
+      required: [true, "Por favor, escriba un nombre"],
+      unique: false,
+    },  
     email: { 
       type: String, 
       required: [true,"Por favor, escriba un email"], 
@@ -12,9 +17,9 @@ const Profesor= new mongoose.Schema({
       required: [true,"Por favor, escriba una contraseña"], 
       unique: false
     },
-    type: { 
+    role: { 
       type: String, 
-      required: [true,"Por favor, escriba una contraseña"], 
+      required: [true,"Por favor, escriba un rol"], 
       unique: false
     }
     

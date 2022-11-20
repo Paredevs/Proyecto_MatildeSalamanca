@@ -1,7 +1,12 @@
 import "../styles/Profe.css";
 import "../images/negro.JPG";
 import routes from "./helpers/routes";
+import UseAuth from "../auth/UseAuth";
+
 function Profe() {
+
+  const { name} = UseAuth();
+
   return (
     <html lang="es" dir="ltr">
       <head>
@@ -32,7 +37,7 @@ function Profe() {
           <ul>
             <li>
               <b>
-                {" "}
+                {name}
                 Nombre de Usuario<br></br>Curso<br></br>
               </b>
             </li>

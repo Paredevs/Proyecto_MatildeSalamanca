@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import role from "./helpers/role";
 import "../styles/Login.css";
 // import PropTypes from 'prop-types';
 
@@ -12,25 +12,24 @@ export default function Login() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [type, setType] = React.useState("Administrador");
+  const [roleUser, setRole] = React.useState(role.admin);
 
   async function registerUser(event) {
 
     event.preventDefault();
     console.log("name", name);
     console.log("email:",email);
-    console.log("type:",type);
-    let uid = ""
-      switch (type) {
-       case "Administrador": uid="administrador"; break;
-       case "Profesor": uid="profesor" ;break;
-       case "Secretaria": uid ="secretaria";break;
-      case "Apoderado": uid="apoderado";break; 
+    console.log("role:",roleUser);
+    let uid = '' ;
+      switch (roleUser) {
+       case role.admin: uid=role.admin; break;
+       case role.profesor: uid=role.profesor ;break;
+       case role.secretaria: uid =role.secretaria;break;
+       case role.apoderado: uid=role.apoderado;break; 
         
-       default:
-      break;
+       default: break;
       }
-  
+  console.log(uid)
      const response = await fetch('http://localhost:5000/api/'+uid+'/register', {
        method: "POST",
        headers: {
@@ -40,12 +39,14 @@ export default function Login() {
          name: name,
          email: email,
          password: password,
-         type: type,
+         role: roleUser,
+         carrera: null,
        }),
      });
      const data = await response.json()
+     alert("Usuario registrado con éxito");
      console.log(data);
-     document.getElementById("register-form").reset();
+     document.getElementById("register-form").reset();  //Reinciando el formulario
 
     
    }
@@ -103,27 +104,15 @@ export default function Login() {
             <label htmlFor="exampleInputEmail1" className="form-label">
                 Tipo de usuario
               </label>
-            <select defaultValue={type} id="TipoUsuario" className="form-select" required onChange={e => {
-              setType(e.target.value)
+            <select defaultValue={role.admin} id="TipoUsuario" className="form-select" required onChange={e => {
+              setRole(e.target.value)
                }}>
-              <option value="Administrador">Administrador</option>
-              <option value="Secretaria">Secretaria</option>
-              <option value="Profesor">Profesor</option>
-              <option value="Apoderado">Apoderado</option>
+              <option value={role.admin}>Administrador</option>
+              <option value={role.secretaria}>Secretaria</option>
+              <option value={role.profesor}>Profesor</option>
+              <option value={role.apoderado}>Apoderado</option>
               </select>
     
-          
-            <div className="mb-3 form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="exampleCheck1"
-              />
-              <label className="form-check-label" htmlFor="exampleCheck1">
-                Mantener sesion iniciada
-
-              </label>
-            </div>
             <button type="submit" className="btn btn-primary">
               Registrarse
             </button>

@@ -1,0 +1,7 @@
+.carousel, .carousel-inner > .item > img {
+    height: 500px;
+  }
+
+  #carouselExampleControls{
+    height: 100%;
+  }

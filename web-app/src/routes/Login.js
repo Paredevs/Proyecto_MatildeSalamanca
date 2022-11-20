@@ -1,34 +1,128 @@
 import React from "react";
 import "../styles/Login.css";
+import routes from "./helpers/routes";
+import UseAuth from "../auth/UseAuth";
+import role from "./helpers/role";
 // import PropTypes from 'prop-types';
 
-export default function Login() {
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
 
-  async function loginUser(event) {
-    event.preventDefault();
-    const response = await fetch("http://localhost:5000/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
+
+export default function Login() {
+  // const [email, setEmail] = React.useState("");
+  // const [password, setPassword] = React.useState("");  original
+  // const [roleUser, setRole] = React.useState("a");
+
+
+  
+
+  const {signIn,setEmail,setPassword} = UseAuth();
+  
+  //const {setUser} = UseAuth();
+  // const {user} = UseAuth();
+  //const {logout} = UseAuth();
+ 
+  
+  //for testing purposes
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+   
+    
+    signIn().then((usr) => {
+     console.log(usr);
+     console.log("user: "+usr.name);
+      alert("Usuario logeado");
+      
+      
+
+      switch (usr.role) {
+                  case role.admin:
+                
+                    window.location.href = routes.admin.menu;
+                    break;
+                  case role.profesor:
+                    window.location.href = routes.profesor.menu;
+                    break;
+                  case role.secretaria:
+                    window.location.href = routes.secretaria;
+                    break;
+                  case role.apoderado:
+                    window.location.href = routes.apoderado;
+                    break;
+                  default:
+                    break;
+                }
+  
+
+    }).catch(err => {
+      console.log(err)
     });
 
-    const data = await response.json();
-    console.log(data);
-    if (data.user) {
-      alert("Usuario logeado");
-      window.location.href = "/Profe";
-    } else {
-      alert("El usuario no existe, por favor revisa tu correo y contraseña");
-    }
+   
+
   }
+  //for testing purposes
+
+
+
+//  async function loginUser(event) {  original code
+
+// //default
+//     event.preventDefault();
+//     const response = await fetch("http://localhost:5000/api/login", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         email: email,
+//         password: password,
+//       }),
+//     });
+
+//     const data = await response.json();
+
+//     console.log("test");
+    
   
+   
+//     const values = Object.values(data); //Obteniendo el rol del usuario
+//     console.log(values);
+    
+    
+    
+//     const roleUser = values[2];
+//     console.log("El rol del usuario en la BD es: "+roleUser);
+//     //default
+    
+//     if (data.user) {
+//       console.log(values);
+     
+//       login(roleUser);
+//       alert("Usuario logeado");
+      
+
+//       switch (roleUser) {
+//         case role.admin:
+//           window.location.href = routes.admin.menu;
+//           break;
+//         case role.profesor:
+//           window.location.href = routes.profesor.menu;
+//           break;
+//         case role.secretaria:
+//           window.location.href = routes.secretaria;
+//           break;
+//         case role.apoderado:
+//           window.location.href = routes.apoderado;
+//           break;
+//         default:
+//           break;
+//       }
+      
+//     } else {
+//       alert("El usuario no existe, por favor revisa tu correo y contraseña");
+//     }
+//}
+
 
   return (
     <div className="Login">
@@ -43,17 +137,22 @@ export default function Login() {
         </nav> */}
       <div className="login">
         <div className="login-box">
-          <form onSubmit={loginUser}>
+          {/* <form onSubmit={loginUser}> */}
+           <form onSubmit={handleSubmit}> 
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Correo electronico
               </label>
               <input
                 type="email"
+                name="email"
                 className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                //onChange={(e) => setEmail(e.target.value)}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="Ingrese su correo electronico"
+                required
               />
               {/* <div id="emailHelp" class="form-text">
                 Tu correo no se compartira con nadie.
@@ -65,9 +164,13 @@ export default function Login() {
               </label>
               <input
                 type="password"
+                name="password"
                 className="form-control"
                 id="exampleInputPassword1"
+              //  onChange={(e) => setPassword(e.target.value)}
                 onChange={(e) => setPassword(e.target.value)}
+                placeholder="Ingrese su contraseña"
+                required
               />
             </div>
 

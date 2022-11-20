@@ -16,6 +16,7 @@ import PrivateRoute from './PrivateRoute';
 import role from './helpers/role';
 import routes from './helpers/routes';
 import MenuAdministrador from "./admin/Menu";  
+import HomePage from './HomePage';
 
 
 
@@ -32,8 +33,9 @@ function App() {
     <BrowserRouter>
     
     <Routes>
+      <Route path={routes.home} element={<HomePage/>}/>
       <Route path={routes.login} element={<Login/>}/>
-      <Route path={routes.login} element={<Register/>}/>
+      <Route path={routes.register} element={<Register/>}/>
     
       <Route  exact path={routes.profesor.menu} element={<PrivateRoute role={role.profesor}/>}>
             <Route exact path={routes.profesor.menu} element={<Profe/>}/>

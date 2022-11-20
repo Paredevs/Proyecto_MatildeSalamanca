@@ -144,3 +144,10 @@ section{
     border: 3px solid #462c06;
     transition: 0.5s;
 }
+
+
+.img{
+  width: 132px;
+  height: 168px;
+  clip-path: circle(42.9% at 50% 46%);
+}
