@@ -28,7 +28,7 @@ function HomePage(){
           <a class="nav-link active" href="#" aria-current="page" >Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href={routes.login} aria-current="page" >Iniciar sesion</a>
+          <a className="nav-link active" href={routes.login} aria-current="page" >Iniciar sesion</a>
         </li>
 
       </ul>
