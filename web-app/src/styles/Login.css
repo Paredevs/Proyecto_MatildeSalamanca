@@ -27,6 +27,7 @@
     text-align: center;
     width: 40%;
     box-shadow: rgb(0 0 0 / 50%) 1px 1px 10px;
+    background-color: #0693e3;
   }
   
   .login-box{
@@ -39,7 +40,7 @@
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
-  
+    background-color: #ffffffce;
   } 
 
     
@@ -50,6 +51,7 @@
     margin-top: 60px;
     width: 200px;
     height: 200px;
+    
     
   } 
   
