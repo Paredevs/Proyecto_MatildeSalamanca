@@ -33,7 +33,6 @@ function App() {
   return (
     
     <BrowserRouter>
-    
     <Routes>
       <Route path={routes.home} element={<HomePage/>}/>
       <Route path={routes.login} element={<Login/>}/>

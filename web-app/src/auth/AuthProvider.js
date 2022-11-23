@@ -24,6 +24,7 @@ export default function AuthProvider({children}) {
     const login = (role) => setUser(role);
     const logout = () => {
         localStorage.clear();
+        setUser(null);
         Navigate(routes.home);
     };
     

@@ -1,29 +1,26 @@
 import "../styles/Profe.css";
 import "../images/negro.JPG";
 import routes from "./helpers/routes";
-import React from "react";
 import UseAuth from "../auth/UseAuth";
-
-
+import { Navigate } from "react-router-dom";
+import logout from "./helpers/logout";
 
 function Profe() {
 
+  const { name} = UseAuth();
 
-  const {logout} = UseAuth();
-  
-  
+
+ 
 
   return (
-    
-    <html lang="es" dir="ltr">
-      <head>
+  <div className="Profesor">
+      
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-      </head>
-      <body>
-        
+     
+     
         <input type="checkbox" id="check"></input>
         <label htmlFor="check">
           <i className="fas fa-arrow-right" id="btn"></i>
@@ -45,8 +42,8 @@ function Profe() {
           <ul>
             <li>
               <b>
-                
-                Nombre de Usuario: {localStorage.getItem("name")}<br></br>Curso<br></br>
+                {localStorage.getItem("name")} {localStorage.getItem("lastname")}
+                Nombre de Usuario<br></br>Curso<br></br>
               </b>
             </li>
             <li>
@@ -55,12 +52,12 @@ function Profe() {
               </a>
             </li>
             <li>
-              <a href="/#">
+              <a href={logout}>
                 <i className="fa fa-wrench"></i>Opciones
               </a>
             </li>
             <li>
-              <button onClick={logout}>
+              <button className="fa fa-wrench" onClick={logout}>
                 <i className="fa fa-window-close"></i>Cerrar Sesion
               </button>
             </li>
@@ -143,8 +140,9 @@ function Profe() {
           <a href={routes.profesor.anotacion_lista} className="btn btn-primary">Lista de anotaciones</a>
           {/* </div> */}
         </section>
-      </body>
-    </html>
+     
+      </div>
+ 
 
     /*<html>
             <head>
