@@ -20,7 +20,7 @@ footer{
   left: -250px;
   width: 250px;
   height: 100%;
-  background: #312e04;
+  background: #0693e3;
   transition: all .5s ease;
 }
 .sidebar header {
@@ -28,7 +28,7 @@ footer{
   color: white;
   line-height: 70px;
   text-align: center;
-  background: #462c06;
+  background: #0693e3;
   user-select: none;
 }
 .sidebar ul a{
@@ -47,7 +47,7 @@ footer{
 
 
 .sidebar ul a:hover {
-  background: #462c06;
+  background: #046eac;
   color: #fff;
 }
 
@@ -67,6 +67,9 @@ footer{
 ul li:hover a{
   padding-left: 50px;
 }
+ul li a{
+  padding-left: 50px;
+}
 .sidebar ul a i{
   margin-right: 16px;
 }
@@ -75,7 +78,7 @@ ul li:hover a{
 }
 label #btn,label #cancel{
   position: absolute;
-  background: #312e04;
+  background: #046eac;
   
   border-radius: 3px;
   cursor: pointer;
@@ -131,16 +134,16 @@ section{
     display: grid;
 }*/
 .btn{
-    border: 3px solid #312e04;
+    border: 3px solid #0693e3;
     margin: 20px;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    background: #312e04;
+    background: #0693e3;
 }
 
 .btn:hover{
-    background: #462c06;
+    background: #046eac;
     color:#ffffff;
-    border: 3px solid #462c06;
+    border: 3px solid #046eac;
     transition: 0.5s;
 }

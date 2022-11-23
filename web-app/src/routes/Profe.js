@@ -2,15 +2,17 @@ import "../styles/Profe.css";
 import "../images/negro.JPG";
 import routes from "./helpers/routes";
 import UseAuth from "../auth/UseAuth";
-import { Navigate } from "react-router-dom";
+//import { Navigate } from "react-router-dom";
 import logout from "./helpers/logout";
 
 function Profe() {
 
   const { name} = UseAuth();
+  
 
-
- 
+function saludar(){
+  alert("hola");
+}
 
   return (
   <div className="Profesor">
@@ -19,7 +21,7 @@ function Profe() {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-     
+
      
         <input type="checkbox" id="check"></input>
         <label htmlFor="check">
@@ -52,14 +54,14 @@ function Profe() {
               </a>
             </li>
             <li>
-              <a href={logout}>
+              <a href="javascript:void(0)" onClick={saludar}>
                 <i className="fa fa-wrench"></i>Opciones
               </a>
             </li>
             <li>
-              <button className="fa fa-wrench" onClick={logout}>
+              <a href="javascript:void(0)" onClick={logout}>
                 <i className="fa fa-window-close"></i>Cerrar Sesion
-              </button>
+              </a>
             </li>
           </ul>
         </div>
