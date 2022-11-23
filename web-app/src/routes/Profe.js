@@ -1,13 +1,20 @@
 import "../styles/Profe.css";
 import "../images/negro.JPG";
 import routes from "./helpers/routes";
+import React from "react";
 import UseAuth from "../auth/UseAuth";
+
+
 
 function Profe() {
 
-  const { name} = UseAuth();
+
+  const {logout} = UseAuth();
+  
+  
 
   return (
+    
     <html lang="es" dir="ltr">
       <head>
         <link
@@ -16,6 +23,7 @@ function Profe() {
         />
       </head>
       <body>
+        
         <input type="checkbox" id="check"></input>
         <label htmlFor="check">
           <i className="fas fa-arrow-right" id="btn"></i>
@@ -37,8 +45,8 @@ function Profe() {
           <ul>
             <li>
               <b>
-                {name}
-                Nombre de Usuario<br></br>Curso<br></br>
+                
+                Nombre de Usuario: {localStorage.getItem("name")}<br></br>Curso<br></br>
               </b>
             </li>
             <li>
@@ -52,9 +60,9 @@ function Profe() {
               </a>
             </li>
             <li>
-              <a href={routes.login}>
+              <button onClick={logout}>
                 <i className="fa fa-window-close"></i>Cerrar Sesion
-              </a>
+              </button>
             </li>
           </ul>
         </div>

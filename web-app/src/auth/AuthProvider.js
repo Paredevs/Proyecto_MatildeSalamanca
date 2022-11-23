@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import role from "../routes/helpers/role";
 import routes from "../routes/helpers/routes";
 export const AuthContext  = createContext();
@@ -19,8 +20,12 @@ export default function AuthProvider({children}) {
     
 
     
+
     const login = (role) => setUser(role);
-    
+    const logout = () => {
+        localStorage.clear();
+        Navigate(routes.home);
+    };
     
    //const [user, setUser] = useState(null); 
    
@@ -29,8 +34,11 @@ export default function AuthProvider({children}) {
 
     //for testing  purposes
 
-
-
+    const getUser = async () => {
+    const usr = user;
+    return usr;
+    }
+    
 
     const signIn = async () => {
         console.log("email: "+email);
@@ -77,6 +85,8 @@ export default function AuthProvider({children}) {
         name,
         setName,
         setUser,
+        getUser,
+        logout,
     };
 
     

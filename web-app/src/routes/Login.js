@@ -3,11 +3,19 @@ import "../styles/Login.css";
 import routes from "./helpers/routes";
 import UseAuth from "../auth/UseAuth";
 import role from "./helpers/role";
+import { useState } from "react";
 // import PropTypes from 'prop-types';
 
 
 
 export default function Login() {
+
+  const { getUser} = UseAuth();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    role: "",
+  });
   // const [email, setEmail] = React.useState("");
   // const [password, setPassword] = React.useState("");  original
   // const [roleUser, setRole] = React.useState("a");
@@ -28,15 +36,17 @@ export default function Login() {
    
     
     signIn().then((usr) => {
-     console.log(usr);
-     console.log("user: "+usr.name);
-      alert("Usuario logeado");
+    console.log(usr);
+    console.log("user: "+usr.name);
+    localStorage.setItem("name", usr.name);
+    localStorage.setItem("email", usr.email);
+    localStorage.setItem("role", usr.role);
+    alert("Usuario logeado");
       
       
 
       switch (usr.role) {
                   case role.admin:
-                
                     window.location.href = routes.admin.menu;
                     break;
                   case role.profesor:

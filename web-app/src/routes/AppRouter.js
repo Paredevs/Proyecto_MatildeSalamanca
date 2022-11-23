@@ -17,6 +17,7 @@ import role from './helpers/role';
 import routes from './helpers/routes';
 import MenuAdministrador from "./admin/Menu";  
 import HomePage from './HomePage';
+import UseAuth from "../auth/UseAuth";
 
 
 
@@ -26,6 +27,7 @@ import HomePage from './HomePage';
 
 function App() {
 
+      
  
  
   return (
@@ -37,7 +39,7 @@ function App() {
       <Route path={routes.login} element={<Login/>}/>
       <Route path={routes.register} element={<Register/>}/>
     
-      <Route  exact path={routes.profesor.menu} element={<PrivateRoute role={role.profesor}/>}>
+      <Route  exact path={routes.profesor.menu} element={<PrivateRoute role={role.profesor} />}>
             <Route exact path={routes.profesor.menu} element={<Profe/>}/>
       </Route>
      

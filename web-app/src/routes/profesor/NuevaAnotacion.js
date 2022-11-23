@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import routes from "../helpers/routes";
  
 export default function Create() {
+
  const [form, setForm] = useState({
    nombre_alumno: "",
    comentario: "",
@@ -39,7 +41,7 @@ export default function Create() {
     });
     
     setForm({  nombre_alumno: "", comentario: "", tipo: "", materia: "", fecha: ""  }); //Deja los campos vacios
-    navigate("/profesor"); //Redirecciona a la pagina de anotaciones
+    navigate(routes.profesor.menu); //Redirecciona a la pagina de anotaciones
  
 }
  
