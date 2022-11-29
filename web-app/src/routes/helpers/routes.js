@@ -1,12 +1,12 @@
 const routes ={
     home: "/",
     login: '/login',
-    register: '/registrarse',
+    register: '/registrar',
     
     secretaria: '/secretaria',
     apoderado: '/apoderado',
     admin: {
-        menu: '/admin/',
+        menu: '/admin',
         usuarios: '/admin/usuarios',
     },
     profesor: {

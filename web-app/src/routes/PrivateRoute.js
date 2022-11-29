@@ -1,18 +1,18 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import routes from "./helpers/routes";
-
+import role from "./helpers/role";
 import UseAuth  from "../auth/UseAuth";
 
 
-export default  function PrivateRoute({role}){
+export default  function PrivateRoute({role: roleRequerided}){
 
   //  const user =  {id:1 , role:'Administrador'}; // determine if authorized, from context or however you're doing it
     const  {hasRole, islogged}  =  UseAuth();
    // const  {user}  =  UseAuth();
     //console.log("rol de Usuario: "+user);
     
-    console.log("rol requerido: "+role);
+    console.log("rol requerido: "+roleRequerided);
  
 
   //  if(role ){
@@ -32,31 +32,30 @@ export default  function PrivateRoute({role}){
       //     console.log("Usuario autorizado");
       //     return (<Outlet />)
      
-       if(role === localStorage.getItem('role')){
+       if(roleRequerided === localStorage.getItem('role')){
         console.log("Usuario autorizado");
         return (<Outlet />)
         
         }else{
           if(localStorage.getItem('role')){
+            console.log("No tiene permisos, pero esta logueado, rol: "+localStorage.getItem('role'));
             switch (localStorage.getItem('role')) {
               case role.admin:
-                window.location.href = routes.admin.menu;
-                break;
+                <div  className="btn btn-primary"  id="liveAlertBtn">No tienes autorizacion</div>
+                return (<Navigate to={routes.admin.menu} />)
               case role.profesor:
-                window.location.href = routes.profesor.menu;
-                break;
+                return (<Navigate to={routes.profesor.menu} />)
               case role.secretaria:
-                window.location.href = routes.secretaria;
-                break;
+               
+                return (<Navigate to={routes.secretaria} />)
               case role.apoderado:
-                window.location.href = routes.apoderado;
-                break;
+                return (<Navigate to={routes.apoderado} />)
               default:
-                break;
+                return (<Navigate to={routes.home} />)
             }
           }
-          console.log("Usuario no autorizado");
-          return (<Navigate to={routes.home} />)
+       //   console.log("Usuario no autorizado");
+        //  return (<Navigate to={routes.home} />)
           
         }
         // if(!islogged()){  
