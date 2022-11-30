@@ -5,3 +5,21 @@
   #carouselExampleControls{
     height: 100%;
   }
+
+  .homepage-class{
+    text-align: center;
+     
+  }
+
+  .img-homepage{
+    clip-path: circle(50% at 50% 50%); 
+    
+  
+     
+  }
+
+  img.img-homepage{
+    height: 530px;
+    width: 750px;
+  
+  }
