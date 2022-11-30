@@ -50,8 +50,16 @@ export default function Login() {
 
     
    }
+   function verificar(){//verifica si el usuario es apoderado o no para mostrar el campo de alumno
+    
+   if(document.getElementById('TipoUsuario').value==='apoderado'){
+    document.getElementsByClassName('preguntasalumnos')[0].style.display = 'block';
+   }else{
+    document.getElementsByClassName('preguntasalumnos')[0].style.display = 'none';
+   }
+    
+  }
 
-   
   return (
     <div className="Login">
       Register screen
@@ -75,6 +83,7 @@ export default function Login() {
                 id="exampleInputName"
                 onChange={(e) => setName(e.target.value)}
                 autoComplete="off"
+                placeholder="Nombre completo"
               />
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Correo electronico</label>
@@ -85,11 +94,13 @@ export default function Login() {
                 aria-describedby="emailHelp"
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="off"
+                placeholder="Correo electronico"
               />
                {/* <div id="emailHelp" class="form-text">
                 Tu correo no se compartira con nadie.
               </div>  */}
             </div>
+
             <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">
                 Contraseña
@@ -99,6 +110,8 @@ export default function Login() {
                 className="form-control"
                 id="exampleInputPassword1"
                 onChange={(e) => setPassword(e.target.value)}
+                placeholder="Contraseña"
+                
               />
             </div>
             <label htmlFor="exampleInputEmail1" className="form-label">
@@ -110,13 +123,47 @@ export default function Login() {
               <option value={role.admin}>Administrador</option>
               <option value={role.secretaria}>Secretaria</option>
               <option value={role.profesor}>Profesor</option>
-              <option value={role.apoderado}>Apoderado</option>
+              <option value={role.apoderado}  >Apoderado</option>
+              onChange={verificar}
               </select>
     
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" onClick={verificar}>
               Registrarse
             </button>
-          </form>
+            {/* cuestionario de datos alumno*/}
+            <div className="preguntasalumnos">
+              <div className="m4">
+                <label>
+                  Nombre completo alumno
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  id="nombrealumno"
+                  placeholder="Nombre alumno"
+                  required
+                />  
+              </div>
+              <div className="m4">
+                <label>
+                  Curso
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  id="cursoalumno"
+                  placeholder="Curso"
+                  required
+                />
+              </div>
+            </div>
+            
+           </form>
+         
+          
+          
         </div>
       </div>
       {/* <header className="App-header">

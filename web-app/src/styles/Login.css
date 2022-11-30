@@ -115,7 +115,9 @@
   height: 30%;
   }
   
-  
+  .preguntasalumnos{
+    display :none;
+  }
   
   /* Encargado de rotar el logo de react en la pagina de ejemplo
   @keyframes App-logo-spin {
