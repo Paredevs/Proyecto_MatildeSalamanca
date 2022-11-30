@@ -163,6 +163,7 @@ if (alertTrigger) {
       </footer>
       <section>
         {/*<div class="botones">*/}
+        <a href={routes.register} className="btn btn-primary">Crear usuario</a>
         <a href={routes.profesor.nota_nueva} className="btn btn-primary">Lista de Profesores</a>
         <a href={routes.profesor.ingresar_asistencia} className="btn btn-primary">Lista de Secretarias</a>
         {/* <button class="btn btn-primary">Ingresar Anotaciones</button> */}

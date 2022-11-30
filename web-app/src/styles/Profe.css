@@ -190,7 +190,7 @@ section{
 }
 
 
-img{
+.img{
   width: 132px;
   height: 168px;
   clip-path: circle(42.9% at 50% 46%);

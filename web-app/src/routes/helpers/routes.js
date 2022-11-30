@@ -2,7 +2,7 @@ const routes ={
     home: "/",
     login: '/login',
     register: '/registrar',
-    
+    contact: '/contacto',
     secretaria: '/secretaria',
     apoderado: '/apoderado',
     admin: {

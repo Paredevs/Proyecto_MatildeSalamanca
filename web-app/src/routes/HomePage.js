@@ -5,7 +5,7 @@ function HomePage(){
     return(
 
 
-<div>
+<div className="homepage-class">
 <nav className="navbar navbar-expand-lg bg-light bg-primary" >
   <div className="container-fluid">
     <a className="navbar-brand">Colegio Matilde Salamanca</a>
@@ -25,7 +25,7 @@ function HomePage(){
           </ul>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" href="#" aria-current="page" >Contacto</a>
+          <a className="nav-link active" href={routes.contact} aria-current="page" >Contacto</a>
         </li>
         <li className="nav-item">
           <a className="nav-link active" href={routes.login} aria-current="page" >Iniciar sesion</a>
@@ -40,13 +40,16 @@ function HomePage(){
 <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="https://rduranv.files.wordpress.com/2022/11/305666961_528559815936341_4019014595779655191_n-2.jpg" className="h-100 w-100" alt=""></img>
+      {/* <img classname="img-homepage"src="https://rduranv.files.wordpress.com/2022/11/305666961_528559815936341_4019014595779655191_n-2.jpg" className="h-100 w-100" alt=""></img> */}
+      <img className="img-homepage" src="https://rduranv.files.wordpress.com/2022/11/305666961_528559815936341_4019014595779655191_n-2.jpg" alt=""></img>
     </div>
     <div className="carousel-item">
-      <img src="https://rduranv.files.wordpress.com/2022/11/297424322_495977129194610_916890612424617393_n-2.jpg" className="h-100 w-100" alt="..."></img>
+      {/* <img classname="img-homepage" src="https://rduranv.files.wordpress.com/2022/11/297424322_495977129194610_916890612424617393_n-2.jpg" className="h-100 w-100" alt="..."></img> */}
+      <img className="img-homepage" src="https://rduranv.files.wordpress.com/2022/11/297424322_495977129194610_916890612424617393_n-2.jpg"  alt="..."></img>
     </div>
     <div className="carousel-item">
-      <img src="https://rduranv.files.wordpress.com/2022/11/306954229_527518009373855_6335908521820604250_n-2.jpg?w=1024" className="h-100 w-100" alt="..."></img>
+      {/* <img src="https://rduranv.files.wordpress.com/2022/11/306954229_527518009373855_6335908521820604250_n-2.jpg?w=1024" className="h-100 w-100" alt="..."></img> */}
+      <img className="img-homepage" src="https://rduranv.files.wordpress.com/2022/11/306954229_527518009373855_6335908521820604250_n-2.jpg?w=1024"  alt="..."></img>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

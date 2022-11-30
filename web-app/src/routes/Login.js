@@ -136,7 +136,6 @@ export default function Login() {
 
   return (
     <div className="Login">
-      Login screen
       {/* <div  style={{ backgroundImage: `url(${background})` }}> </div> Forma de agregar fondo */}
       {/* <Main /> */}
       {/* <img src={logo} className="grande" alt="" />  */}
