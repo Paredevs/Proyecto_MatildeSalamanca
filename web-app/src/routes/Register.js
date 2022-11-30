@@ -50,12 +50,18 @@ export default function Login() {
 
     
    }
+
+  
    function verificar(){//verifica si el usuario es apoderado o no para mostrar el campo de alumno
     
    if(document.getElementById('TipoUsuario').value==='apoderado'){
     document.getElementsByClassName('preguntasalumnos')[0].style.display = 'block';
-   }else{
+ 
+   
+   }else if(document.getElementById('TipoUsuario').value !=='apoderado'){
     document.getElementsByClassName('preguntasalumnos')[0].style.display = 'none';
+    //limpiar los labels al apretar otro usuario
+    
    }
     
   }
@@ -84,6 +90,7 @@ export default function Login() {
                 onChange={(e) => setName(e.target.value)}
                 autoComplete="off"
                 placeholder="Nombre completo"
+                required
               />
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Correo electronico</label>
@@ -95,6 +102,7 @@ export default function Login() {
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="off"
                 placeholder="Correo electronico"
+                required
               />
                {/* <div id="emailHelp" class="form-text">
                 Tu correo no se compartira con nadie.
@@ -111,28 +119,29 @@ export default function Login() {
                 id="exampleInputPassword1"
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Contraseña"
+                required
                 
               />
             </div>
+ 
+
+
+
             <label htmlFor="exampleInputEmail1" className="form-label">
                 Tipo de usuario
               </label>
             <select defaultValue={role.admin} id="TipoUsuario" className="form-select" required onChange={e => {
               setRole(e.target.value)
+              verificar(e.target.value)
                }}>
               <option value={role.admin}>Administrador</option>
               <option value={role.secretaria}>Secretaria</option>
               <option value={role.profesor}>Profesor</option>
-              <option value={role.apoderado}  >Apoderado</option>
-              onChange={verificar}
+              <option value={role.apoderado}>Apoderado</option>
+              
               </select>
-    
-            <button type="submit" className="btn btn-primary" onClick={verificar}>
-              Registrarse
-            </button>
-            {/* cuestionario de datos alumno*/}
-            <div className="preguntasalumnos">
-              <div className="m4">
+              <div className="preguntasalumnos">
+              <div className="m4" id='usu'>
                 <label>
                   Nombre completo alumno
                 </label>
@@ -159,6 +168,12 @@ export default function Login() {
                 />
               </div>
             </div>
+    
+            <button type="submit" className="btn btn-primary">
+              Registrarse
+            </button>
+            {/* cuestionario de datos alumno*/}
+            
             
            </form>
          
