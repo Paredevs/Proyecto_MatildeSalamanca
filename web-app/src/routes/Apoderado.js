@@ -1,4 +1,5 @@
 import '../styles/Apoderado.css';
+import logout from "./helpers/logout";
 import '..'
 function Apoderado(){
 
@@ -31,7 +32,7 @@ function Apoderado(){
      <li><b> Nombre de Usuario</b></li>
      <li><a href="/#"><i class="fa fa-key"></i>Cambiar Clave</a></li>
      <li><a href="/#"><i class="fa fa-wrench"></i>Opciones</a></li>
-     <li><a href="/#"><i class="fa fa-window-close"></i>Cerrar Sesion</a></li>
+     <li><a href="javascript:void(0)" onClick={logout}><i class="fa fa-window-close"></i>Cerrar Sesion</a></li>
     </ul>
    </div>
    <footer>
