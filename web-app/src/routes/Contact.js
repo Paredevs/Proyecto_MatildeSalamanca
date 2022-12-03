@@ -19,15 +19,16 @@ export default function Contact(){
                             
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
-                                    <input type="text" id="name" name="name" class="form-control"/>
-                                    <label for="name" class="">Tu nombre</label>
+                                <label for="name" class="">Tu nombre</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Nombre completo"/>
+                                    
                                 </div>
                             </div>
                     
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
-                                    <input type="text" id="email" name="email" class="form-control"/>
-                                    <label for="email" class="">Tu correo electronico</label>
+                                <label for="email" class="">Tu correo electronico</label>
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Correo electronico"/>
                                 </div>
                             </div>
                             
@@ -37,8 +38,8 @@ export default function Contact(){
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="md-form mb-0">
-                                    <input type="text" id="subject" name="subject" class="form-control"/>
                                     <label for="subject" class="">Asunto</label>
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Asunto"/>
                                 </div>
                             </div>
                         </div>
@@ -51,8 +52,8 @@ export default function Contact(){
                             <div class="col-md-12">
         
                                 <div class="md-form">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
                                     <label for="message">Tu mensaje</label>
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Escribe aquí tu mensaje"></textarea>
                                 </div>
         
                             </div>
