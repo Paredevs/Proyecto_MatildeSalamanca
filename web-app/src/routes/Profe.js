@@ -10,10 +10,6 @@ function Profe() {
   const { name} = UseAuth();
   
 
-function saludar(){
-  alert("hola");
-}
-
   return (
   <div className="Profesor">
       
@@ -54,7 +50,7 @@ function saludar(){
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" onClick={saludar}>
+              <a href="/#">
                 <i className="fa fa-wrench"></i>Opciones
               </a>
             </li>
@@ -144,31 +140,7 @@ function saludar(){
         </section>
      
       </div>
- 
 
-    /*<html>
-            <head>
-                <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-            </head>
-            <body>
-                <input type="checkbox" id="check"></input>
-                <label for="check">
-                    <i class="fas fa-bars" id="btn"></i>
-                    <i class="fas fa-times" id="cancel"></i>
-                </label>
-                <div class="sidebar">
-                    <header>Profe</header>
-                    <ul>
-                        <li><a href="/#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-                        <li><a href="/#"><i class="fas fa-link"></i>Dashboard</a></li>
-                        <li><a href="/#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-                        <li><a href="/#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-                        <li><a href="/#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-                        <li><a href="/#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-                    </ul>
-                </div>
-            </body>
-        </html>*/
   );
 }
 

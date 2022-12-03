@@ -54,19 +54,43 @@ export default function Login() {
    }
 
   
-   function verificar(){//verifica si el usuario es apoderado o no para mostrar el campo de alumno
+   function verificar(){//verifica lo que se selecciona en el form select
     
-   if(document.getElementById('TipoUsuario').value==='apoderado'){
+   if(document.getElementById('TipoUsuario').value==='apoderado'){//apoderado
+    document.getElementsByClassName('login')[0].style.height='500px';
     document.getElementsByClassName('preguntasalumnos')[0].style.display = 'block';
- 
-   
    }else if(document.getElementById('TipoUsuario').value !=='apoderado'){
+
     document.getElementsByClassName('preguntasalumnos')[0].style.display = 'none';
-    //limpiar los labels al apretar otro usuario
+   }
+
+   if(document.getElementById('TipoUsuario').value==='profesor'){//profesor
+    document.getElementsByClassName('login')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('preguntasprofesor')[0].style.display = 'block';
+   }else if(document.getElementById('TipoUsuario').value !=='profesor'){
+
+    document.getElementsByClassName('preguntasprofesor')[0].style.display = 'none';
+   }
     
+   if(document.getElementById('TipoUsuario').value==='secretaria'){//secretaria
+    document.getElementsByClassName('login')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('preguntassecretaria')[0].style.display = 'block';
+   }else if(document.getElementById('TipoUsuario').value !=='secretaria'){
+   
+    document.getElementsByClassName('preguntassecretaria')[0].style.display = 'none';
+   }
+
+   if(document.getElementById('TipoUsuario').value==='admin'){//admin
+    document.getElementsByClassName('login')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('preguntasadmin')[0].style.display = 'block';
+   }else if(document.getElementById('TipoUsuario').value !=='admin'){
+    
+    document.getElementsByClassName('preguntasadmin')[0].style.display = 'none';
    }
     
   }
+
+
 
   return (
     <div className="Login">
@@ -142,8 +166,8 @@ export default function Login() {
               <option value={role.apoderado}>Apoderado</option>
               
               </select>
-              <div className="preguntasalumnos">
-              <div className="m4" id='usu'>
+              <div className="preguntasalumnos">{/*preguntas para alumnos*/} <br></br>
+              <div className="m4">
                 <label>
                   Nombre completo alumno
                 </label>
@@ -169,7 +193,130 @@ export default function Login() {
                   required
                 />
               </div>
+              <div className="m4">
+                <label>
+                  Fecha de nacimiento
+                </label>
+                <input type="date" id="start" name="trip-start"
+                  value="2018-07-22"
+                  min="2010-01-01" max="2022-12-31">
+                  </input>
+                {/*<input
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  id="fechanacimientoalumno"
+                  placeholder="Fecha de nacimiento"
+                  required
+                />/*/}
+              </div>
             </div>
+
+
+            <div className="preguntasprofesor">{/*preguntas profesor*/}<br></br>
+              <div className="m4">
+                <label>
+                  Telefono
+                </label>
+                <input
+                  type="text"
+                  name="nameprofesor"
+                  className="form-control"
+                  id="telefonoprofesor"
+                  placeholder="Telefono"
+                  required
+                />  
+              </div>
+              <div className="m4">
+                <label>
+                  Especialidad
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  id="especialidadprofesor"
+                  placeholder="Especialidad"
+                  required
+                />
+              </div>
+              <div className="m4">
+                <label>
+                  Fecha de nacimiento
+                </label>
+                <input type="date" id="start" name="trip-start"
+                  value="2018-07-22"
+                  min="2010-01-01" max="2022-12-31">
+                  </input>
+              </div>
+            </div>
+
+
+
+            <div className="preguntassecretaria">{/*preguntas secretaria*/}<br></br>
+              <div className="m4">
+                <label>
+                  Telefono
+                </label>
+                <input
+                  type="text"
+                  name="namesecretaria"
+                  className="form-control"
+                  id="telefonosecretaria"
+                  placeholder="Telefono"
+                  required
+                />  
+              </div>
+              <div className="m4">
+                <label>
+                  Fecha de nacimiento
+                </label>
+                <input type="date" id="start" name="trip-start"
+                  value="2018-07-22"
+                  min="2010-01-01" max="2022-12-31">
+                  </input>
+              </div>
+            </div>
+
+            <div className="preguntasadmin">{/*preguntas admin*/}<br></br>
+              <div className="m4">
+                <label>
+                  Telefono
+                </label>
+                <input
+                  type="text"
+                  name="nameadmin"
+                  className="form-control"
+                  id="telefonaadmin"
+                  placeholder="Telefono"
+                  required
+                />  
+              </div>
+              <div className="m4">
+                <label>
+                  Fecha de nacimiento
+                </label>
+                <input type="date" id="start" name="trip-start"
+                  value="2018-07-22"
+                  min="2010-01-01" max="2022-12-31">
+                  </input>
+              </div>
+
+              <div className="m4">
+                <label>
+                  Direccion
+                </label>
+                <input
+                  type="text"
+                  name="direccion"
+                  className="form-control"
+                  id="direccion"
+                  placeholder="Direccion"
+                  required
+                />  
+              </div>
+            </div>
+            
     
             <button type="submit" className="btn btn-primary">
               Registrarse

@@ -1,4 +1,5 @@
 import "../styles/Secre.css";
+import logout from "./helpers/logout";
 
 function Secre() {
   return (
@@ -46,7 +47,7 @@ function Secre() {
               </a>
             </li>
             <li>
-              <a href="/">
+            <a href="javascript:void(0)" onClick={logout}>
                 <i className="fa fa-window-close"></i>Cerrar Sesion
               </a>
             </li>
