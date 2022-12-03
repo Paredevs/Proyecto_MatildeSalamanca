@@ -1,39 +1,40 @@
-import '../styles/frontpage.css';
+import '../styles/Homepage.css';
 import routes from './helpers/routes';
+import logo from '../images/logo.png';
 function HomePage(){
 
     return(
 
 
 <div className="homepage-class">
-<nav className="navbar navbar-expand-lg" >
-  <div className="container-fluid">
-    <a className="navbar-brand">Colegio Matilde Salamanca</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-      <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Acerca de nosotros
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Nuestra Historia</a></li>
-            <li><a className="dropdown-item" href="#">Mision y Vision</a></li>
-            <li><a className="dropdown-item" href="#">Himno </a></li>
-          </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link active" href={routes.contact} aria-current="page" >Contacto</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link active" href={routes.login} aria-current="page" >Iniciar sesion</a>
-        </li>
+  <nav className="navbar navbar-expand-lg" >
+    <div className="container-fluid">
+      <span className="navbar-brand "><img className='pequeña' src={logo} alt=""/> Escuela Matilde Salamanca</span>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+        <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Acerca de nosotros
+            </a>
+            <ul className="dropdown-menu">
+              <li><a className="dropdown-item" href="#">Nuestra Historia</a></li>
+              <li><a className="dropdown-item" href="#">Mision y Vision</a></li>
+              <li><a className="dropdown-item" href="#">Himno </a></li>
+            </ul>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" href={routes.contact} aria-current="page" >Contacto</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" href={routes.login} aria-current="page" >Iniciar sesion</a>
+          </li>
 
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
     </nav>
 
 

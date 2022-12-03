@@ -18,7 +18,8 @@ function Secre() {
         {/*aqui iban los botones antes: ingresar notas etc */}
         <div className="sidebar">
           <header>
-            Perfil Administrativo
+            Perfil <b>
+              {localStorage.getItem("role")}</b>
             <img className="Picture_logo"
               src="    https://s3.amazonaws.com/gobcl-prod/filer_public_thumbnails/public_files/2022/subsecretarios/camilavallejo.jpg__328x342_q85_crop_subsampling-2.jpg
 "
@@ -31,7 +32,8 @@ function Secre() {
           </header>
           <ul>
             <li>
-              <b> Nombre de Usuario</b>
+              <b> Nombre de Usuario</b><b>
+              {localStorage.getItem("name")}</b>
             </li>
             <li>
               <a href="/#">
@@ -130,7 +132,10 @@ function Secre() {
             Ver Datos Apoderado/Alumno
           </button>
           <button className="btn btn-primary">
-            Ver situcaion academica Alumno
+            Ver situacion academica Alumno
+          </button>
+          <button className="btn btn-primary">
+            Solicitudes de contacto
           </button>
           {/* </div> */}
         </section>

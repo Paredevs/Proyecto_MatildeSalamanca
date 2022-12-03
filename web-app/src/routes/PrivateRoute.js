@@ -38,7 +38,7 @@ export default  function PrivateRoute({role: roleRequerided}){
         
         }else{
           if(localStorage.getItem('role')){
-            console.log("No tiene permisos, pero esta logueado, rol: "+localStorage.getItem('role'));
+            alert("No autorizado");
             switch (localStorage.getItem('role')) {
               case role.admin:
                 <div  className="btn btn-primary"  id="liveAlertBtn">No tienes autorizacion</div>
