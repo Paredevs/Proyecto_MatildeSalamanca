@@ -141,10 +141,10 @@ app.post('/api/login',  async (req, res) => {
     //   // role: req.body.role,   comprueba si el rol es el mismo
 
     //  })
-    console.log(user)
-    console.log(user1+"este es Profesor")
-    console.log(user2+"este es scretaria")
-    console.log(user3+"este es scretaria")
+    // console.log(user)
+    // console.log(user1+"este es Profesor")
+    // console.log(user2+"este es scretaria")
+    // console.log(user3+"este es scretaria")
     
    if(user1 != null){
        user=user1
@@ -165,10 +165,10 @@ app.post('/api/login',  async (req, res) => {
 
       },'secret123')
 
-      
-      console.log("usuario:"+user);
+      console.log("Success login")
+      console.log("user:"+user);
 
-      return res.json({status: 'ok', user: token,name: user.name, email:user.email, role: user.role});
+      return res.json({status: 'ok', token: token,name: user.name, email:user.email, role: user.role});
       
       
     } else{

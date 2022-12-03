@@ -35,3 +35,4 @@ const administradorSchema =  new Schema({
 )
 
 module.exports = mongoose.model('Administrador', administradorSchema);
+//test
