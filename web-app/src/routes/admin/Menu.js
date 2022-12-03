@@ -40,9 +40,9 @@ if (alertTrigger) {
       <div className="Administrador_class">
 
       
-          <div className="alert" id="liveAlertPlaceholder">
+          {/* <div className="alert" id="liveAlertPlaceholder">
             Seccion para alertas
-          </div>
+          </div> */}
       
       <link
         rel="stylesheet"

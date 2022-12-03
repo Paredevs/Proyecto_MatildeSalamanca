@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "run": " cd /home/rodrigo/Desktop/Universidad/2022/'Segundo Semestre'/'Aplicaciones de internet'/Proyecto_MatildeSalamanca/web-app/ && react-scripts start && cd ./src/server/ && nodemon server.js"
   },
   "eslintConfig": {
     "extends": [

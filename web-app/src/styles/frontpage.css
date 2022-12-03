@@ -2,6 +2,12 @@
     height: 500px;
   }
 
+  .navbar{
+    height: 50%;
+    font-size: 15px;
+    background-color: rgb(182, 215, 250);
+  }
+
   #carouselExampleControls{
     height: 100%;
   }
@@ -11,8 +17,14 @@
      
   }
 
+  img{
+   
+     filter: drop-shadow(-1px 100px 100px rgba(50, 50, 0, 0.5));
+  }
+
   .img-homepage{
-    clip-path: circle(50% at 50% 50%); 
+    
+    clip-path: circle(45% at 50% 50%); 
     
   
      

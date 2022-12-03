@@ -29,6 +29,8 @@ export default function Login() {
         
        default: break;
       }
+
+      
   console.log(uid)
      const response = await fetch('http://localhost:5000/api/'+uid+'/register', {
        method: "POST",
