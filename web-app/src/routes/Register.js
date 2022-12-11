@@ -197,10 +197,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="fecha0" />
                 {/*<input
                   type="text"
                   name="name"
@@ -244,10 +241,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="fecha2" />
               </div>
             </div>
 
@@ -271,10 +265,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="fecha1" />
               </div>
             </div>
 
@@ -296,10 +287,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="bday" />
               </div>
 
               <div className="m4">
@@ -322,7 +310,6 @@ export default function Login() {
               Registrarse
             </button>
             {/* cuestionario de datos alumno*/}
-            
             
            </form>
          
