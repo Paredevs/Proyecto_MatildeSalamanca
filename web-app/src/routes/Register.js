@@ -56,9 +56,12 @@ export default function Login() {
 
   
    function verificar(){//verifica lo que se selecciona en el form select
+
+
+    
     
    if(document.getElementById('TipoUsuario').value==='apoderado'){//apoderado
-    document.getElementsByClassName('login')[0].style.height='500px';
+    document.getElementsByClassName('register-box')[0].style.height='500px';
     document.getElementsByClassName('preguntasalumnos')[0].style.display = 'block';
    }else if(document.getElementById('TipoUsuario').value !=='apoderado'){
 
@@ -66,7 +69,7 @@ export default function Login() {
    }
 
    if(document.getElementById('TipoUsuario').value==='profesor'){//profesor
-    document.getElementsByClassName('login')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('register-box')[0].style.height='500px';//AGRANDA EL LOGIN
     document.getElementsByClassName('preguntasprofesor')[0].style.display = 'block';
    }else if(document.getElementById('TipoUsuario').value !=='profesor'){
 
@@ -74,7 +77,7 @@ export default function Login() {
    }
     
    if(document.getElementById('TipoUsuario').value==='secretaria'){//secretaria
-    document.getElementsByClassName('login')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('register-box')[0].style.height='100%';//AGRANDA EL LOGIN
     document.getElementsByClassName('preguntassecretaria')[0].style.display = 'block';
    }else if(document.getElementById('TipoUsuario').value !=='secretaria'){
    
@@ -82,7 +85,7 @@ export default function Login() {
    }
 
    if(document.getElementById('TipoUsuario').value==='admin'){//admin
-    document.getElementsByClassName('login')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('register-box')[0].style.height='500px';//AGRANDA EL LOGIN
     document.getElementsByClassName('preguntasadmin')[0].style.display = 'block';
    }else if(document.getElementById('TipoUsuario').value !=='admin'){
     
@@ -94,7 +97,7 @@ export default function Login() {
 
 
   return (
-    <div className="register-page">
+    <div className="register-box">
       {/* <div  style={{ backgroundImage: `url(${background})` }}> </div> Forma de agregar fondo */}
       {/* <Main /> */}
       {/* <img src={logo} className="grande" alt="" />  */}
@@ -104,6 +107,7 @@ export default function Login() {
           </div>
         </nav> */}
       
+        <div className="register-page">
         <div className="login-box">
           <form id="register-form" onSubmit={registerUser}>
             <div className="mb-3">
@@ -322,11 +326,11 @@ export default function Login() {
               Registrar
             </button>
             {/* cuestionario de datos alumno*/}
-            
+          
             
            </form>
          
-          
+           </div>
           
         </div>
       {/* <header className="App-header">
