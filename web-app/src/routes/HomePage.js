@@ -1,39 +1,57 @@
-import '../styles/frontpage.css';
+import '../styles/Homepage.css';
 import routes from './helpers/routes';
+import logo from '../images/logo.png';
 function HomePage(){
 
     return(
 
 
-<div className="homepage-class">
-<nav className="navbar navbar-expand-lg" >
-  <div className="container-fluid">
-    <a className="navbar-brand">Colegio Matilde Salamanca</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-      <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Acerca de nosotros
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Nuestra Historia</a></li>
-            <li><a className="dropdown-item" href="#">Mision y Vision</a></li>
-            <li><a className="dropdown-item" href="#">Himno </a></li>
-          </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link active" href={routes.contact} aria-current="page" >Contacto</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link active" href={routes.login} aria-current="page" >Iniciar sesion</a>
-        </li>
 
-      </ul>
+<div className="homepage-class">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Raleway"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <nav className="navbar navbar-expand-lg" >
+    <div className="container-fluid">
+      <span className="navbar-brand "><img className='pequeña' src={logo} alt=""/> Escuela Matilde Salamanca</span>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link active" href="#" aria-current="page" >Admision</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active" href="#" aria-current="page" >Calendario de Actividades</a>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Acerca de nosotros
+              </a>
+              <ul className="dropdown-menu">
+                <li><a className="dropdown-item" href="#">Nuestra Historia</a></li>
+                <li><a className="dropdown-item" href="#">Mision y Vision</a></li>
+                <li><a className="dropdown-item" href="#">Himno </a></li>
+              </ul>
+          </li>
+            <li className="nav-item">
+              <a className="nav-link active" href={routes.contact} aria-current="page" >Contáctenos</a>
+            </li>
+           
+        </ul>
+
+        <ul class="nav navbar-nav ml-auto">
+        <li className="nav-item">
+              <a className="nav-link active" href={routes.login} aria-current="page" > <i class="fa fa-sign-in"></i><b style={{textShadow: '0px 2px 4px rgba(150, 150, 150, 0.91)'}}> Iniciar sesion</b></a>
+            </li>
+          <a href="https://www.facebook.com/escuelamatilde/" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a>
+          <a href="https://www.instagram.com/escuelamatildesalamanca/?hl=es" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a>    
+        </ul>
+        
+      </div>
     </div>
-  </div>
     </nav>
 
 
@@ -96,6 +114,7 @@ function HomePage(){
         </ul>
         
       </div>*/}
+      
 
 <footer>
 <div className="text-center"><p className="text-footer"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-building" viewBox="0 0 16 16">
@@ -111,7 +130,9 @@ function HomePage(){
     <path  fillRule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"/>
     <path  fillRule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
     </svg> Calle Matilde Salamanca Nro.498, Salamanca, Chile</a></p>
+    
 </div>
+
 </footer> 
 </div>
     );

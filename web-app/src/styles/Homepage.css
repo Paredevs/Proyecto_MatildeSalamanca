@@ -1,0 +1,71 @@
+/* .carousel, .carousel-inner > .item > img {
+    height: 500px;
+  } */
+   .carousel-inner{
+   
+    height: 100%;
+   }
+
+   .active{
+    height: 100%;
+   } 
+
+  .navbar{
+    height: auto;
+    font-size: 15px;
+    
+    border-bottom: double;
+    
+    box-shadow: -1px -5px 30px -2px rgba(0,0,0,0.81);
+    /* box-shadow: 0 0 4px rgba(0,0,0,.1); */
+    background-color: rgb(182, 215, 250);
+    
+  }
+
+  #carouselExampleControls{
+    height: 100%;
+  }
+
+  .homepage-class{
+    height: 100%;
+   font-family: 'Helvetica Neue', sans-serif;
+    
+     
+  }
+
+  /* img{
+   height: 100px;
+   width: 100px;
+      filter: drop-shadow(-1px 100px 100px rgba(50, 50, 0, 0.5)); 
+  } */
+
+  .img-homepage{
+    width: 100%;
+    height: 100%;
+    text-align: center; 
+    clip-path: circle(30% at 50% 50%); 
+    
+  
+     
+  }
+
+  img.img-homepage{
+    /* margin: auto; */
+    /* text-align: center; */
+    /* height: auto;
+    width: 750px; */
+  
+  }
+
+
+  img.pequeña{
+    height: 40px;
+    width: 40px;
+    filter: drop-shadow(-1px 100px 100px rgba(50, 50, 0, 0.5)); 
+  }
+
+
+  .carousel slide{
+    height: 100%;
+  }
+  
