@@ -57,7 +57,7 @@ export default function Login() {
   
    function verificar(){//verifica lo que se selecciona en el form select
 
-
+  
     
     
    if(document.getElementById('TipoUsuario').value==='apoderado'){//apoderado
@@ -201,10 +201,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="fecha" />
                 {/*<input
                   type="text"
                   name="name"
@@ -248,10 +245,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="fecha2" />
               </div>
             </div>
 
@@ -275,10 +269,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="fecha3" />
               </div>
             </div>
 
@@ -300,10 +291,7 @@ export default function Login() {
                 <label>
                   Fecha de nacimiento
                 </label>
-                <input type="date" id="start" name="trip-start"
-                  value="2018-07-22"
-                  min="2010-01-01" max="2022-12-31">
-                  </input>
+                <input type="date" name="fecha4" />
               </div>
 
               <div className="m4">
