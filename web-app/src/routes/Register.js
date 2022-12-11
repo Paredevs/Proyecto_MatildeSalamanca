@@ -58,18 +58,19 @@ export default function Login() {
    function verificar(){//verifica lo que se selecciona en el form select
 
   
-    
+
     
    if(document.getElementById('TipoUsuario').value==='apoderado'){//apoderado
-    document.getElementsByClassName('register-page')[0].style.height='500px';
+    document.getElementsByClassName('register-page')[0].style.height='600px';
     document.getElementsByClassName('preguntasalumnos')[0].style.display = 'block';
+ 
    }else if(document.getElementById('TipoUsuario').value !=='apoderado'){
-
     document.getElementsByClassName('preguntasalumnos')[0].style.display = 'none';
+
    }
 
    if(document.getElementById('TipoUsuario').value==='profesor'){//profesor
-    document.getElementsByClassName('register-page')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('register-page')[0].style.height='600px';//AGRANDA EL LOGIN
     document.getElementsByClassName('preguntasprofesor')[0].style.display = 'block';
    }else if(document.getElementById('TipoUsuario').value !=='profesor'){
 
@@ -77,7 +78,7 @@ export default function Login() {
    }
     
    if(document.getElementById('TipoUsuario').value==='secretaria'){//secretaria
-    document.getElementsByClassName('register-page')[0].style.height='100%';//AGRANDA EL LOGIN
+    document.getElementsByClassName('register-page')[0].style.height='500px';//AGRANDA EL LOGIN
     document.getElementsByClassName('preguntassecretaria')[0].style.display = 'block';
    }else if(document.getElementById('TipoUsuario').value !=='secretaria'){
    
@@ -85,7 +86,7 @@ export default function Login() {
    }
 
    if(document.getElementById('TipoUsuario').value==='admin'){//admin
-    document.getElementsByClassName('register-page')[0].style.height='500px';//AGRANDA EL LOGIN
+    document.getElementsByClassName('register-page')[0].style.height='600px';//AGRANDA EL LOGIN
     document.getElementsByClassName('preguntasadmin')[0].style.display = 'block';
    }else if(document.getElementById('TipoUsuario').value !=='admin'){
     
