@@ -47,7 +47,7 @@ app.post('/api/admin/register', async (req, res) => {   //Registrar administrado
     res.json({status: 'error', message: "Error al crear el administrador"});
   }
 });
-app.post('/api/secretaria/register', async (req, res) => {   //Registrar secretarie
+app.post('/api/secretaria/register', async (req, res) => {   //Registrar secretaria
 
   console.log(req.body);
   try{

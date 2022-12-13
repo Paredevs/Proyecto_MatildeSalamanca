@@ -18,6 +18,8 @@ import routes from './helpers/routes';
 import MenuAdministrador from "./admin/Menu";  
 import HomePage from './HomePage';
 import Contact from './Contact';
+import Footer from './Footer';
+import EditarAnotacion from './profesor/EditarAnotacion';
 // import UseAuth from "../auth/UseAuth";   
 
 
@@ -34,7 +36,9 @@ function App() {
   return (
     
     <BrowserRouter>
+    
     <Routes>
+
       <Route path={routes.home} element={<HomePage/>}/>
       <Route path={routes.login} element={<Login/>}/>
       <Route path={routes.register} element={<Register/>}/>
@@ -74,6 +78,11 @@ function App() {
       </Route>
 
 
+      <Route exact path={routes.profesor.editar_anotacion} element={<PrivateRoute role={role.profesor}/>}>
+            <Route exact path={routes.profesor.editar_anotacion} element={<EditarAnotacion/>}/>
+      </Route>
+
+
      
       {/* 
       <Route path='/profesor' element={<Profe/>}/>
@@ -84,7 +93,9 @@ function App() {
       <Route path='/profesor/anotacion/lista' element={<ListaAnotaciones/>}/> */}
   
       <Route path='*' element={<Navigate replace to='/'/>}/> 
-    </Routes> 
+
+    </Routes>
+    <Footer/> 
   </BrowserRouter>
 
     
