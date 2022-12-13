@@ -22,15 +22,22 @@ Este proyecto fue creado por los siguientes estudiantes:
 
 ## Comandos 
 
+### Front-end
+```shell
+cd web-app/
+```
 ```shell
 npm install
-
-```
-```shell
-npm install moongose
-
-```
-```shell
 npm start
 
 ```
+
+### Back-end
+```shell
+cd web-app/
+cd src/
+cd server/
+node server.js
+
+```
+
